@@ -1,4 +1,5 @@
 require('dotenv').config();
+const fs = require('fs');
 const puppeteer = require('puppeteer');
 
 (async () => {
@@ -7,15 +8,13 @@ const puppeteer = require('puppeteer');
     await page.goto(process.env.URL, { waitUntil: 'networkidle0' })
     await page.setViewport({ width: 1920, height: 1548 });
 
-
     await page.type('input[name="user"]', "admin");
     await page.type('input[name="password"]', process.env.PASSWORD);
 
     await page.click('button[type="submit"]');
     await page.waitForNavigation({ waitUntil: 'networkidle0', timeout: 60000 });
 
-    // ScreenShot
-    await page.screenshot({ path: "D:/Santai/Report-Grafana/grafana.jpeg", type: "jpeg", quality: 100, omitBackground: true, fullPage: true });
+    await page.screenshot({ path: process.env.IMAGE_PATH, type: "jpeg", quality: 100, omitBackground: true, fullPage: true });
 
     const panelTitles = ["CPU Basic", "Memory %", "Disk Space Used Basic"];
     const results = [];
@@ -41,29 +40,8 @@ const puppeteer = require('puppeteer');
 
     if (result) {
         results.push({ title, data: result });
-    }
-    }
+    }}
 
-    // Check status normal or abnormal
-    // for (const result of results) {
-    //     const abnormal = [];
-
-    //     for (const data of result.data) {
-    //         const max = parseFloat(data.max);
-    //         const current = parseFloat(data.current);
-
-    //         if ((result.title === "CPU Basic" || result.title === "Memory %") && (max >= 50 || current >= 50)) {
-    //             abnormal.push({ ip: data.ip, status: "Abnormal", max, current });
-    //         } else if (result.title === "Disk Space Used Basic" && (current >= 75)) {
-    //             abnormal.push({ ip: data.ip, status: "Abnormal", current });
-    //         }
-    //     }
-
-    //     result.status = abnormal.length === 0 ? "Normal" : abnormal;
-    // }
-    // console.log(JSON.stringify(results, null, 2));
-
-    
     // Check abnormal
     const abnormalResults = [];
 
@@ -77,11 +55,13 @@ const puppeteer = require('puppeteer');
         } else if (result.title === "Disk Space Used Basic" && (current >= 75)) {
         abnormalResults.push({ panel: result.title, ip: data.ip, status: "Abnormal", current });
         }
-    }
-    }
+    }}  
 
-    console.log(JSON.stringify(abnormalResults, null, 2));
-
+    fs.writeFileSync(process.env.LOG_PATH, JSON.stringify(abnormalResults, null, 2));
     
     await browser.close();
 })();
+
+// Note
+// Powershell Command in UiPath
+// "Set-Location -Path 'D:\Santai\Report-Grafana'; node D:\Santai\Report-Grafana\grafana.js"
