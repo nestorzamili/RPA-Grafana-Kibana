@@ -5,7 +5,7 @@ const puppeteer = require('puppeteer');
 (async () => {
     const browser = await puppeteer.launch({ headless: "new", args: ['--no-sandbox', '--disable-setuid-sandbox']});
     const page = await browser.newPage();
-    await page.goto(process.env.URL, { waitUntil: 'networkidle0' })
+    await page.goto(process.env.GRAFANA_URL, { waitUntil: 'networkidle0' })
     await page.setViewport({ width: 1920, height: 1548 });
 
     await page.type('input[name="user"]', "admin");
@@ -51,17 +51,13 @@ const puppeteer = require('puppeteer');
         const current = parseFloat(data.current);
 
         if ((result.title === "CPU Basic" || result.title === "Memory %") && (max >= 50 || current >= 50)) {
-        abnormalResults.push({ panel: result.title, ip: data.ip, status: "Abnormal", max, current });
+        abnormalResults.push({ panel: result.title, ip: data.ip, status: "Tidak Normal⚠️", max, current });
         } else if (result.title === "Disk Space Used Basic" && (current >= 75)) {
-        abnormalResults.push({ panel: result.title, ip: data.ip, status: "Abnormal", current });
+        abnormalResults.push({ panel: result.title, ip: data.ip, status: "Tidak Normal⚠️", current });
         }
     }}  
-
+    
     fs.writeFileSync(process.env.LOG_PATH, JSON.stringify(abnormalResults, null, 2));
     
     await browser.close();
 })();
-
-// Note
-// Powershell Command in UiPath
-// "Set-Location -Path 'D:\Santai\Report-Grafana'; node D:\Santai\Report-Grafana\grafana.js"
