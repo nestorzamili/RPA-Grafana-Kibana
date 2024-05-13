@@ -42,7 +42,7 @@ const puppeteer = require('puppeteer');
         results.push({ title, data: result });
     }}
 
-    // Check abnormal
+    // Check status
     const abnormalResults = [];
 
     for (const result of results) {
@@ -55,9 +55,14 @@ const puppeteer = require('puppeteer');
         } else if (result.title === "Disk Space Used Basic" && (current >= 75)) {
         abnormalResults.push({ panel: result.title, ip: data.ip, status: "Tidak Normal⚠️", current });
         }
-    }}  
+        }
+    }
     
+    if (abnormalResults.length === 0) {
+        fs.writeFileSync(process.env.LOG_PATH, JSON.stringify({ "status": "Normal✅" }, null, 2));
+    } else {
     fs.writeFileSync(process.env.LOG_PATH, JSON.stringify(abnormalResults, null, 2));
+    }
     
     await browser.close();
 })();
