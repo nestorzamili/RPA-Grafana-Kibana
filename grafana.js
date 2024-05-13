@@ -46,22 +46,22 @@ const puppeteer = require('puppeteer');
     const abnormalResults = [];
 
     for (const result of results) {
-    for (const data of result.data) {
-        const max = parseFloat(data.max);
-        const current = parseFloat(data.current);
+        for (const data of result.data) {
+            const max = parseFloat(data.max);
+            const current = parseFloat(data.current);
 
-        if ((result.title === "CPU Basic" || result.title === "Memory %") && (max >= 50 || current >= 50)) {
-        abnormalResults.push({ panel: result.title, ip: data.ip, status: "Tidak Normal⚠️", max, current });
-        } else if (result.title === "Disk Space Used Basic" && (current >= 75)) {
-        abnormalResults.push({ panel: result.title, ip: data.ip, status: "Tidak Normal⚠️", current });
-        }
+            if ((result.title === "CPU Basic" || result.title === "Memory %") && (max >= 50 || current >= 50)) {
+            abnormalResults.push({ panel: result.title, ip: data.ip, status: "Tidak Normal⚠️", max, current });
+            } else if (result.title === "Disk Space Used Basic" && (current >= 75)) {
+            abnormalResults.push({ panel: result.title, ip: data.ip, status: "Tidak Normal⚠️", current });
+            }
         }
     }
     
     if (abnormalResults.length === 0) {
         fs.writeFileSync(process.env.LOG_PATH, JSON.stringify({ "status": "Normal✅" }, null, 2));
     } else {
-    fs.writeFileSync(process.env.LOG_PATH, JSON.stringify(abnormalResults, null, 2));
+        fs.writeFileSync(process.env.LOG_PATH, JSON.stringify(abnormalResults, null, 2));
     }
     
     await browser.close();
