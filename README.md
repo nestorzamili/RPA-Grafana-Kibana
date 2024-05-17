@@ -34,4 +34,4 @@ Open UiPath Studio, then click on "Open a Local Project". Navigate to and open t
 
 ## License
 
-This project is licensed under the terms of the license provided in the [LICENSE](LICENSE) file.
+This project is licensed under the terms of the license provided in the [LICENSE](LICENCE) file.
