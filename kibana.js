@@ -41,16 +41,18 @@ async function processImage() {
       top: 360,
     })
     .resize(320, 640)
-    .modulate({ brightness: 2, saturation: 0.5 })
+    .greyscale()
+    .normalize()
+    .modulate({ brightness: 2, saturation: 1 })
     .toFile(process.env.KIBANA_QUERY_LATENCY);
 
   const {
     data: { text },
   } = await tesseract.recognize(process.env.KIBANA_QUERY_LATENCY, "eng");
-  const matches = text.match(/\d+/g);
+  const matches = text.replace(/(\d),(\d)/g, "$1$2").match(/\d+/g);
   const numbers = matches.map(Number);
 
-  if (numbers[0] >= 3000) {
+  if (numbers[0] >= 20000) {
     fs.writeFileSync(
       process.env.KIBANA_LOG_PATH,
       JSON.stringify(
