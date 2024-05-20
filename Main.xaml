@@ -3,39 +3,18 @@
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
-      <x:String>System.Activities.Expressions</x:String>
-      <x:String>System.Activities.Validation</x:String>
-      <x:String>System.Activities.XamlIntegration</x:String>
       <x:String>Microsoft.VisualBasic</x:String>
-      <x:String>Microsoft.VisualBasic.Activities</x:String>
       <x:String>System</x:String>
       <x:String>System.Collections</x:String>
       <x:String>System.Collections.Generic</x:String>
       <x:String>System.Collections.ObjectModel</x:String>
-      <x:String>System.Data</x:String>
-      <x:String>System.Diagnostics</x:String>
-      <x:String>System.Drawing</x:String>
-      <x:String>System.IO</x:String>
-      <x:String>System.Linq</x:String>
-      <x:String>System.Net.Mail</x:String>
-      <x:String>System.Xml</x:String>
-      <x:String>System.Xml.Linq</x:String>
-      <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
-      <x:String>System.Windows.Markup</x:String>
-      <x:String>GlobalVariablesNamespace</x:String>
-      <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Management.Automation</x:String>
       <x:String>System.Dynamic</x:String>
       <x:String>System.Reflection</x:String>
-      <x:String>Newtonsoft.Json.Linq</x:String>
-      <x:String>Newtonsoft.Json</x:String>
-      <x:String>System.ComponentModel</x:String>
-      <x:String>System.Collections.Specialized</x:String>
       <x:String>UiPath.Web.Activities</x:String>
       <x:String>UiPath.Platform.ResourceHandling</x:String>
-      <x:String>System.Linq.Expressions</x:String>
       <x:String>System.Text.RegularExpressions</x:String>
       <x:String>UiPath.Web</x:String>
       <x:String>System.Security</x:String>
@@ -45,11 +24,22 @@
     <sco:Collection x:TypeArguments="AssemblyReference">
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
       <AssemblyReference>PresentationCore</AssemblyReference>
       <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
       <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.Common</AssemblyReference>
@@ -58,93 +48,114 @@
       <AssemblyReference>System.Drawing.Common</AssemblyReference>
       <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
       <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Net.Mail</AssemblyReference>
       <AssemblyReference>System.ObjectModel</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
-      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
-      <AssemblyReference>System.Management.Automation</AssemblyReference>
-      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
-      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
-      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>netstandard</AssemblyReference>
-      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
-      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
-      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
-      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Platform</AssemblyReference>
-      <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Memory.Data</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
-      <AssemblyReference>System.Linq.Async</AssemblyReference>
-      <AssemblyReference>System.Collections</AssemblyReference>
-      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
-      <AssemblyReference>UiPath.Workflow</AssemblyReference>
-      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
-      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
-      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
-      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
       <AssemblyReference>UiPath.Web</AssemblyReference>
-      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="496,687" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="512,250" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="logGrafana" />
       <Variable x:TypeArguments="x:String" Default="D:/Santai/RPA-Grafana-Kibana/Images/grafana.jpeg" Name="imgGrafana" />
       <Variable x:TypeArguments="x:String" Name="apiKey" />
+      <Variable x:TypeArguments="x:String" Default="D:\Santai\RPA-Grafana-Kibana\logs\grafana.json" Name="logGrafanaPath" />
+      <Variable x:TypeArguments="x:String" Default="D:\Santai\RPA-Grafana-Kibana\logs\kibana.json" Name="logKibanaPath" />
+      <Variable x:TypeArguments="x:String" Default="D:/Santai/RPA-Grafana-Kibana/Images/kibana.jpeg" Name="imgKibana" />
+      <Variable x:TypeArguments="x:String" Name="logKibana" />
+      <Variable x:TypeArguments="x:Int32" Name="responseStatus">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">HttpClient_5</x:String>
+            <x:String x:Key="SourcePropertyName">StatusCode</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokePowerShell x:TypeArguments="sma:PSObject" ContinueOnError="{x:Null}" CommandText="Set-Location -Path 'D:\Santai\RPA-Grafana-Kibana'; node D:\Santai\RPA-Grafana-Kibana\grafana.js" DisplayName="Invoke Power Shell: Running grafana.js" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="InvokePowerShell`1_8" IsScript="True" PowerShellProcess="PowerShellCore">
-      <ui:InvokePowerShell.Parameters>
-        <scg:Dictionary x:TypeArguments="x:String, InArgument" />
-      </ui:InvokePowerShell.Parameters>
-      <ui:InvokePowerShell.PowerShellVariables>
-        <scg:Dictionary x:TypeArguments="x:String, Argument" />
-      </ui:InvokePowerShell.PowerShellVariables>
+    <Sequence DisplayName="Grafana" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-    </ui:InvokePowerShell>
-    <ui:ReadTextFile File="{x:Null}" Content="[logGrafana]" DisplayName="Read Text File" FileName="logs\grafana.json" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_2">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:ReadTextFile>
-    <Assign sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="Assign_3">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[logGrafana]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:String" xml:space="preserve">[System.Text.RegularExpressions.Regex.Replace(
+      <ui:LogMessage DisplayName="Log Message: grafana.js start" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Proses screenshot dashboard grafana in progress&quot;]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:LogMessage>
+      <ui:InvokePowerShell x:TypeArguments="sma:PSObject" ContinueOnError="{x:Null}" CommandText="Set-Location -Path 'D:\Santai\RPA-Grafana-Kibana'; node D:\Santai\RPA-Grafana-Kibana\grafana.js" DisplayName="Invoke Power Shell: Running grafana.js" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="InvokePowerShell`1_8" IsScript="True" PowerShellProcess="PowerShellCore">
+        <ui:InvokePowerShell.Parameters>
+          <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+        </ui:InvokePowerShell.Parameters>
+        <ui:InvokePowerShell.PowerShellVariables>
+          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+        </ui:InvokePowerShell.PowerShellVariables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokePowerShell>
+      <ui:LogMessage DisplayName="Log Message: grafana.js done" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Proses screenshot dashboard grafana done&quot;]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:LogMessage>
+      <ui:ReadTextFile File="{x:Null}" Content="[logGrafana]" DisplayName="Read Text File: grafana logs" FileName="[logGrafanaPath]" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="ReadTextFile_2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ReadTextFile>
+      <Assign DisplayName="Assign: formatting grafana logs" sap:VirtualizedContainerService.HintSize="388,48" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[logGrafana]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String" xml:space="preserve">[System.Text.RegularExpressions.Regex.Replace(
     logGrafana.
     Replace("[", "").
     Replace("]", "").
@@ -156,43 +167,168 @@
     "(?&lt;=\n)\s+",
     "",
     RegexOptions.Multiline).Replace(",", "")]</InArgument>
-      </Assign.Value>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </Assign>
-    <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="Untitled.txt" sap:VirtualizedContainerService.HintSize="434,165" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[logGrafana]" />
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="x-api-key" CacheStrategy="None" DisplayName="Get Asset" FolderPath="EOD" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
-      <ui:GetRobotAsset.Value>
-        <OutArgument x:TypeArguments="x:String">[apiKey]</OutArgument>
-      </ui:GetRobotAsset.Value>
+        </Assign.Value>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Assign>
+    </Sequence>
+    <Sequence DisplayName="Kibana" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-    </ui:GetRobotAsset>
-    <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/json" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="http://localhost:3113/send-file" sap:VirtualizedContainerService.HintSize="434,93" sap2010:WorkflowViewState.IdRef="HttpClient_4" Method="POST" TimeoutMS="60000">
-      <ui:HttpClient.Attachments>
-        <InArgument x:TypeArguments="x:String" x:Key="attachment">[imgGrafana]</InArgument>
-      </ui:HttpClient.Attachments>
-      <ui:HttpClient.Cookies>
-        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-      </ui:HttpClient.Cookies>
-      <ui:HttpClient.Headers>
-        <InArgument x:TypeArguments="x:String" x:Key="x-api-key">[apiKey]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ids" />
-      </ui:HttpClient.Headers>
-      <ui:HttpClient.Parameters>
-        <InArgument x:TypeArguments="x:String" x:Key="caption">["Report Utilitas Server Finacle" + Environment.NewLine + Environment.NewLine + logGrafana]</InArgument>
-      </ui:HttpClient.Parameters>
-      <ui:HttpClient.UrlSegments>
-        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-      </ui:HttpClient.UrlSegments>
-    </ui:HttpClient>
+      <ui:LogMessage DisplayName="Log Message: kibana.js start" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Proses screenshot dashboard kibana in progress&quot;]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:LogMessage>
+      <ui:InvokePowerShell x:TypeArguments="sma:PSObject" ContinueOnError="{x:Null}" CommandText="Set-Location -Path 'D:\Santai\RPA-Grafana-Kibana'; node D:\Santai\RPA-Grafana-Kibana\kibana.js" DisplayName="Invoke Power Shell: Running kibana.js" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="InvokePowerShell`1_9" IsScript="True" PowerShellProcess="PowerShellCore">
+        <ui:InvokePowerShell.Parameters>
+          <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+        </ui:InvokePowerShell.Parameters>
+        <ui:InvokePowerShell.PowerShellVariables>
+          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+        </ui:InvokePowerShell.PowerShellVariables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokePowerShell>
+      <ui:LogMessage DisplayName="Log Message: kibana.js done" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Proses screenshot dashboard kibana done&quot;]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:LogMessage>
+      <ui:ReadTextFile File="{x:Null}" Content="[logKibana]" DisplayName="Read Text File: kibana logs" FileName="[logKibanaPath]" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="ReadTextFile_3">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ReadTextFile>
+      <Assign DisplayName="Assign: formatting kibana logs" sap:VirtualizedContainerService.HintSize="388,48" sap2010:WorkflowViewState.IdRef="Assign_4">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[logKibana]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String" xml:space="preserve">[System.Text.RegularExpressions.Regex.Replace(
+    logKibana.
+    Replace("[", "").
+    Replace("]", "").
+    Replace("{", "").
+    Replace("}", "").
+    Replace("""", "").
+    Replace("panel: ", "").
+	Trim(),
+    "(?&lt;=\n)\s+",
+    "",
+    RegexOptions.Multiline).Replace(",", "")]</InArgument>
+        </Assign.Value>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Assign>
+    </Sequence>
+    <Sequence DisplayName="Report" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="x-api-key" CacheStrategy="None" DisplayName="Get Asset: x-api-key" FolderPath="EOD" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+        <ui:GetRobotAsset.Value>
+          <OutArgument x:TypeArguments="x:String">[apiKey]</OutArgument>
+        </ui:GetRobotAsset.Value>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:GetRobotAsset>
+      <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/json" DisplayName="HTTP Request: send report grafana" EnableSSLVerification="True" EndPoint="http://localhost:3113/send-file" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="HttpClient_4" Method="POST" StatusCode="[responseStatus]" TimeoutMS="60000">
+        <ui:HttpClient.Attachments>
+          <InArgument x:TypeArguments="x:String" x:Key="attachment">[imgGrafana]</InArgument>
+        </ui:HttpClient.Attachments>
+        <ui:HttpClient.Cookies>
+          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+        </ui:HttpClient.Cookies>
+        <ui:HttpClient.Headers>
+          <InArgument x:TypeArguments="x:String" x:Key="x-api-key">[apiKey]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="ids" />
+        </ui:HttpClient.Headers>
+        <ui:HttpClient.Parameters>
+          <InArgument x:TypeArguments="x:String" x:Key="caption">["Report Utilitas Server Finacle" + Environment.NewLine + logGrafana]</InArgument>
+        </ui:HttpClient.Parameters>
+        <ui:HttpClient.UrlSegments>
+          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+        </ui:HttpClient.UrlSegments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:HttpClient>
+      <ui:LogMessage DisplayName="Log Message: report grafana" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Send report grafana status: &quot; + responseStatus.ToString]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:LogMessage>
+      <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/json" DisplayName="HTTP Request: send report kibana" EnableSSLVerification="True" EndPoint="http://localhost:3113/send-file" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="HttpClient_5" Method="POST" StatusCode="[responseStatus]" TimeoutMS="60000">
+        <ui:HttpClient.Attachments>
+          <InArgument x:TypeArguments="x:String" x:Key="attachment">[imgKibana]</InArgument>
+        </ui:HttpClient.Attachments>
+        <ui:HttpClient.Cookies>
+          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+        </ui:HttpClient.Cookies>
+        <ui:HttpClient.Headers>
+          <InArgument x:TypeArguments="x:String" x:Key="x-api-key">[apiKey]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="ids" />
+        </ui:HttpClient.Headers>
+        <ui:HttpClient.Parameters>
+          <InArgument x:TypeArguments="x:String" x:Key="caption">["Kibana DB" + Environment.NewLine + logGrafana]</InArgument>
+        </ui:HttpClient.Parameters>
+        <ui:HttpClient.UrlSegments>
+          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+        </ui:HttpClient.UrlSegments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:HttpClient>
+      <ui:LogMessage DisplayName="Log Message: report kibana" sap:VirtualizedContainerService.HintSize="388,48" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Send report kibana status: &quot; + responseStatus.ToString]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:LogMessage>
+    </Sequence>
   </Sequence>
 </Activity>
