@@ -5,7 +5,7 @@ const sharp = require("sharp");
 const puppeteer = require("puppeteer");
 
 async function login(page) {
-  await page.goto(process.env.ELASTIC_URL), { waitUntil: "networkidle0" };
+  await page.goto(process.env.KIBANA_URL), { waitUntil: "networkidle0" };
   await page.setViewport({ width: 1600, height: 1129 });
   await page.waitForSelector('input[name="username"]');
   await page.waitForSelector('input[name="password"]');
@@ -17,7 +17,7 @@ async function login(page) {
 
 async function takeScreenshot(page) {
   await page.click(
-    'a[data-test-subj="dashboardListingTitleLink-[Metricbeat-PostgreSQL]-Database-Overview"]'
+    'a[data-test-subj="dashboardListingTitleLink-[Metricbeat-PostgreSQL]-rgn-ceria-prd-db-Database-Overview-"]'
   );
   await page.waitForFunction(
     () => document.querySelectorAll("canvas").length >= 8
